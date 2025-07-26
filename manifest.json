@@ -1,0 +1,25 @@
+{
+    "name": "GPT Pruner",
+    "description": "Limit visible ChatGPT messages to improve website performance.",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": [
+        "tabs", 
+        "storage"
+    ],
+    "host_permissions": ["https://chatgpt.com/c/*"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://chatgpt.com/c/*"],
+            "js": ["content/content.js"],
+            "run_at": "document_idle"
+        }
+    ],
+    "action": {
+        "default_popup": "./popup/popup.html",
+        "default_icon": "./images/hello_extensions.png"
+    }
+}

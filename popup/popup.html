@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ChatGPT Message Pruner</title>
+  <link rel="stylesheet" href="./popup.css">
+</head>
+<body>
+  <h1>ChatGPT Message Pruner</h1>
+  <p class="title">Number of visible messages:</p>
+  <div class="main">
+    <div>
+      <input class="input-box" type="number" id="msgCount" min="-1" max="100" value="10" />
+      <button class="save-btn" id="saveBtn">Prune</button>
+    </div>
+  </div>
+  <div class="notes">
+    <p>🔁 Increasing the message count will reload the page.</p>
+    <p>💬 Use -1 to show all messages.</p>
+  </div>
+  <script src="./popup.js"></script>
+</body>
+</html>
